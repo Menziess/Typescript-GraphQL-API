@@ -2,7 +2,7 @@
 
 <!-- [![CircleCI](https://circleci.com/gh/Menziess/Typescript-API/tree/master.svg?style=svg&circle-token=b40654524090d03bc32187f67738fde5933f6651)](https://circleci.com/gh/Menziess/Typescript-API/tree/master) -->
 
-<p align="center"><img width="240" src="public/img/map.png"></p>
+<p align="center"><img width="240" src="res/img/map.png"></p>
 
 ### 1. Idea
 
