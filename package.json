@@ -12,7 +12,7 @@
     "test": "yarn run test:coverage",
     "test:unit": "mocha -r ts-node/register test/**/*.spec.ts --exit",
     "test:coverage": "TS_NODE_COMPILER_OPTIONS='{\"target\":\"es6\"}' nyc --reporter=lcov yarn run test:unit",
-    "heroku-prebuild": "npm --only=dev",
+    "heroku-prebuild": "yarn --only=dev",
     "heroku-postbuild": "cross-env NODE_ENV=production tsc"
   },
   "repository": "git+https://github.com/Menziess/Typescript-API.git",
