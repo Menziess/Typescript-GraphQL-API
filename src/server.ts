@@ -4,40 +4,36 @@ import * as bodyParser from 'body-parser';
 import { graphqlExpress, graphiqlExpress } from 'apollo-server-express';
 import { makeExecutableSchema } from "graphql-tools";
 
-// Some fake data
-const books = [
-	{
-		title: "Harry Potter and the Sorcerer's stone",
-		author: 'J.K. Rowling',
-	},
-	{
-		title: 'Jurassic Park',
-		author: 'Michael Crichton',
-	}
-];
 
-// The GraphQL schema in string form
-const typeDefs = `
-  type Query { books: [Book] }
-  type Book { title: String, author: String }
-`;
+const typeDefs = [`
+type Query {
+  hello: String
+}
 
-// The resolvers
+schema {
+  query: Query
+}`];
+
 const resolvers = {
-	Query: { books: () => books },
+	Query: {
+		hello(root) {
+			return 'world';
+		}
+	}
 };
 
-// Put together a schema
-const schema = makeExecutableSchema({
-	typeDefs,
-	resolvers,
-});
+const schema = makeExecutableSchema({ typeDefs, resolvers });
+
+
+
+
 
 // initialize the server and configure support for ejs templates
 const app: express.Express = express();
 
 // bodyParser is needed just for POST.
-app.use('/graphql', bodyParser.json(), graphqlExpress({ schema }));
+app.use('/v1', bodyParser.json(), graphqlExpress({ schema }));
+app.use('/v1-doc', graphiqlExpress({ endpointURL: '/graphql' }));
 
 // start the server
 const port = process.env.PORT || 3000;
