@@ -1,6 +1,6 @@
 # Reiskosten-API
 
-<!-- [![CircleCI](https://circleci.com/gh/Menziess/Typescript-API/tree/master.svg?style=svg&circle-token=b40654524090d03bc32187f67738fde5933f6651)](https://circleci.com/gh/Menziess/Typescript-API/tree/master) -->
+[![CircleCI](https://circleci.com/gh/Menziess/Typescript-API.svg?style=svg)](https://circleci.com/gh/Menziess/Typescript-API)
 
 <p align="center"><img width="240" src="res/img/map.png"></p>
 
@@ -27,10 +27,10 @@ Cloning the project:
     git clone git@github.com:Menziess/Typescript-API.git
     cd Typescript-API
 
-Install using npm
+Install using yarn
 
-    npm install
+    yarn
 
-Run dev using npm
+Run dev using yarn
 
-    npm run dev
+    yarn dev
