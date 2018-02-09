@@ -2,6 +2,7 @@
   "include": [
     "src/**/*"
   ],
+  "compileOnSave": true,
   "compilerOptions": {
     "outDir": "./dist",
     "sourceMap": true,

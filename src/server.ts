@@ -13,7 +13,7 @@ const books = [
 	{
 		title: 'Jurassic Park',
 		author: 'Michael Crichton',
-	},
+	}
 ];
 
 // The GraphQL schema in string form
