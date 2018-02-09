@@ -1,7 +1,7 @@
 {
   "name": "typescript-api",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "main": "dist/server.js",
   "author": "Menziess <stefan_schenk@hotmail.com>",
   "scripts": {
     "start": "node dist/server.js",
