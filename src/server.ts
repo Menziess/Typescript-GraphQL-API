@@ -39,7 +39,7 @@ app.use('/v1-doc', graphiqlExpress({ endpointURL: '/graphql' }));
 const port = process.env.PORT || 3000;
 const env = process.env.NODE_ENV || 'production';
 app.listen(port, () => {
-	console.info('Server listening on http://localhost:' + port + ', Ctrl+C to stop')
+	console.info('Server listening on http://localhost:' + port + '/v1-doc, Ctrl+C to stop')
 });
 
 module.exports = app;

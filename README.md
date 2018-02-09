@@ -1,6 +1,6 @@
 # Reiskosten-API
 
-[![CircleCI](https://circleci.com/gh/Menziess/Typescript-API.svg?style=svg)](https://circleci.com/gh/Menziess/Typescript-API)
+[![CircleCI](https://circleci.com/gh/Menziess/Typescript-API.svg?style=svg&circle-token=f15bb61e27183be7c674cc93123710dec4c20c86)](https://circleci.com/gh/Menziess/Typescript-API)
 
 <p align="center"><img width="240" src="res/img/map.png"></p>
 

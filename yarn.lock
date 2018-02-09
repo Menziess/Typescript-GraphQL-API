@@ -36,10 +36,6 @@
   version "0.12.3"
   resolved "https://registry.yarnpkg.com/@types/graphql/-/graphql-0.12.3.tgz#c429585aaa4523135e0ab4e12dec72d2d913946f"
 
-"@types/lodash@ts2.0":
-  version "4.14.50"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.50.tgz#2227da4d65fafe249bccd59c7b9396e27674c8f7"
-
 "@types/mime@*":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@types/mime/-/mime-2.0.0.tgz#5a7306e367c539b9f6543499de8dd519fac37a8b"
@@ -48,7 +44,11 @@
   version "2.2.48"
   resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-2.2.48.tgz#3523b126a0b049482e1c3c11877460f76622ffab"
 
-"@types/node@*", "@types/node@^8.5.7":
+"@types/node@*":
+  version "4.0.36"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-4.0.36.tgz#394672a25c7d49b48698d5fb59d3ea72d2b6e5fa"
+
+"@types/node@^8.5.7":
   version "8.9.1"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-8.9.1.tgz#5a329d73a97f3c5a626dfe0ed8c0b831fee5357a"
 
@@ -437,8 +437,8 @@ boxen@^1.2.1:
     widest-line "^2.0.0"
 
 brace-expansion@^1.1.7:
-  version "1.1.8"
-  resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.8.tgz#c07b211c7c952ec1f8efd51a77ef0d1d3990a292"
+  version "1.1.9"
+  resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.9.tgz#acdc7dde0e939fb3b32fe933336573e2a7dc2b7c"
   dependencies:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
