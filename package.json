@@ -1,42 +1,49 @@
 {
-  "name": "typescript-api",
+  "name": "prices-api",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "main": "dist/server.js",
   "author": "Menziess <stefan_schenk@hotmail.com>",
   "scripts": {
     "start": "node dist/server.js",
-    "dev": "concurrently --kill-others \"tsc -w\" \"nodemon dist/server.js localhost 8080\"",
+    "dev": "concurrently --kill-others \"tsc -w\" \"nodemon dist/server.js\"",
     "build": "cross-env NODE_ENV=production tsc",
-    "clean": "rm -rf dist .nyc_output coverage",
-    "pretest": "mkdir -p .nyc_output && tslint src/**/*.ts{,x} --config tslint.json --project tsconfig.json",
+    "clean": "rm -rf dist .nyc_output coverage yarn.lock",
+    "pretest": "mkdir -p .nyc_output && touch src/.env.ts && tslint --fix src/**/*.ts{,x} --config tslint.json --project tsconfig.json",
     "test": "yarn run test:coverage",
     "test:unit": "mocha -r ts-node/register test/**/*.spec.ts --exit",
     "test:coverage": "TS_NODE_COMPILER_OPTIONS='{\"target\":\"es6\"}' nyc --reporter=lcov yarn run test:unit",
+    "posttest": "git fetch --all --unshallow",
     "heroku-prebuild": "yarn --only=dev",
     "heroku-postbuild": "cross-env NODE_ENV=production tsc"
   },
-  "repository": "git+https://github.com/Menziess/Typescript-API.git",
+  "repository": "git+https://app.buddy.works/taxiid-1/prices-api",
   "private": true,
   "dependencies": {
+    "@types/bcryptjs": "*",
     "@types/express": "*",
-    "@types/graphql": "^0.12.3",
+    "@types/jsonwebtoken": "*",
     "apollo-server-express": "^1.3.2",
+    "bcryptjs": "^2.4.3",
     "concurrently": "^3.5.1",
+    "cross-env": "^5.1.3",
     "express": "^4.0.35",
     "express-rewrite": "^0.0.4",
+    "fs": "^0.0.1-security",
     "graphql": "^0.13.0",
     "graphql-tools": "^2.20.2",
-    "jwt-simple": "^0.5.1",
+    "jsonwebtoken": "^8.1.1",
+    "mongoose": "^5.0.4",
     "nodemon": "^1.14.12",
     "tslint-config-airbnb": "^5.6.0"
   },
   "devDependencies": {
     "@types/chai": "^4.1.2",
     "@types/mocha": "^2.2.48",
+    "@types/mongodb": "^3.0.5",
+    "@types/mongoose": "^5.0.1",
     "@types/node": "^8.5.7",
     "@types/supertest": "^2.0.4",
     "chai": "^4.1.2",
-    "cross-env": "^5.1.3",
     "mocha": "^5.0.0",
     "nyc": "^11.4.1",
     "supertest": "^3.0.0",
@@ -64,8 +71,5 @@
     "delay": "2500"
   },
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Menziess/Typescript-API/issues"
-  },
-  "homepage": "https://github.com/Menziess/Typescript-API#readme"
+  "homepage": "https://prices--api.herokuapp.com/"
 }

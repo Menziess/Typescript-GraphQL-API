@@ -1,11 +1,13 @@
 {
   "rules": {
+    "ordered-imports": true,
     "extends": "tslint-config-airbnb",
     "max-line-length": {
       "options": [
         120
       ]
     },
+    "semicolon": true,
     "new-parens": true,
     "no-arg": true,
     "no-bitwise": true,
