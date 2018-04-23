@@ -6,7 +6,7 @@
 
 ### 1. Idea
 
-Implementing a system to determine the price of a taxi ride depending on various factors, varying for each client.
+Template for GraphQL api.
 
 ### 2. Installation
 
